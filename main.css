@@ -74,3 +74,12 @@ button {
 label{
   color: #fff;
 }
+
+.message{
+  color: #fff;
+  font-weight: bold;
+}
+
+[v-cloak] {
+  display: none;
+}

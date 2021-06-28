@@ -4,7 +4,8 @@ Vue.createApp({
             perspective: 100,
             rotateX: 0,
             rotateY: 0,
-            rotateZ: 0
+            rotateZ: 0,
+            message : ''
         }
     },
     computed: {
@@ -25,6 +26,10 @@ Vue.createApp({
             this.rotateX = 0;
             this.rotateY = 0;
             this.rotateZ = 0;
+            this.message = "Datos reiniciados!";
+            setTimeout(() => {
+                this.message = "";
+            }, 1500);
         },
         copy(){
             const el = document.createElement('textarea');
@@ -36,6 +41,10 @@ Vue.createApp({
             el.select();
             document.execCommand('copy');
             document.body.removeChild(el);
+            this.message = "Datos copiados!";
+            setTimeout(() => {
+                this.message = "";
+            }, 1500);
         }
     }
 }).mount('#app')
